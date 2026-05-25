@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Premium Store</title>
+
+  <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+  <h1>🛍 Premium Online Store</h1>
+
+  <!-- LOGIN BOX -->
+  <div class="auth-box" id="authBox">
+
+    <h2>Login / Register</h2>
+
+    <input type="text" id="name" placeholder="Name" />
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+
+    <button onclick="registerUser()">Register</button>
+    <button onclick="loginUser()">Login</button>
+
+    <p id="authMessage"></p>
+
+  </div>
+
+  <!-- DASHBOARD -->
+  <div id="dashboard" style="display:none;">
+
+    <div style="text-align:center; margin:10px;">
+      <a href="cart.html">🛒 Go to Cart</a>
+    </div>
+
+    <input
+      id="searchBox"
+      type="text"
+      placeholder="Search products..."
+      onkeyup="searchProducts()"
+    />
+
+    <div id="products"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+
+  // ALWAYS SHOW LOGIN PAGE FIRST
+  window.onload = () => {
+
+    document.getElementById("authBox").style.display = "block";
+
+    document.getElementById("dashboard").style.display = "none";
+
+  };
+
+</script>
+</body>
+</html>
